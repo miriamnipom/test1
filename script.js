@@ -1,10 +1,13 @@
+// why capital letter?
 let ProductName=document.getElementById('ProductName');
 let price = document.getElementById ("price");
 let button=document.getElementById('button');
 let productSelect=document.getElementById('product');
 let inputImage=document.getElementById('image');
+// better name, everything is "data"
 let dataArr = []
 button.addEventListener('click',function(){
+    // this function is too long, you need to split it to cpuple of fucntions.
     let table = document.getElementById("productTable");
     let row = table.insertRow(-1);
     let cell1 = row.insertCell(0);
@@ -23,9 +26,13 @@ button.addEventListener('click',function(){
     cell2.appendChild(textNode2);
     cell3.appendChild(textNode3);
     cell4.appendChild(img);
+    // nice!
     dataArr.push({product: ProductName, price: price, img: inputImage, type:productSelect})
+    // this needs to be a function
     ProductName.value = ''; 
 price.value='';
 inputImage.value=''; 
 productSelect.value='';
 })
+
+// You did not did the bonus 
